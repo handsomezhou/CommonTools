@@ -161,6 +161,33 @@ public class JsonUtil {
     }
 
     /**
+     *
+     * @param jsonString
+     * {
+     *   "common_key": {
+     *     "xxxs": [
+     *       "xxx1"
+     *     ]
+     *   },#==Y
+     *   "key1": "key1"
+     * } #==X
+     * @param typeOfT  new TypeToken<X<Y>>(){}.getType()
+     * @param <T>
+     * @return
+     */
+    public static <T> T fromJson(String jsonString, Type typeOfT) {
+        T t = null;
+        if (sGson != null) {
+            try {
+                t = sGson.fromJson(jsonString, typeOfT);
+            }catch (JsonSyntaxException ex){
+                Log.i(TAG,jsonString+" "+ex.toString());
+            }
+        }
+        return t;
+    }
+
+    /**
      * 列表中元素包含泛型时报错：classcastexception com.google.gson.internal.linkedtreemap cannot be cast to
      * @param jsonString
      * @param cls
