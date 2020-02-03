@@ -125,6 +125,7 @@ public interface Constant {
     String NULL = "null";
     String FORMAT_ONE_DECIMAL_PLACES = "%.1f";
     String FORMAT_TWO_DECIMAL_PLACES = "%.2f";
+    String FORMAT_FOUR_DECIMAL_PLACES = "%.4f";
     String INT_TWO_DECIMAL_PLACES = "%02d";
 
     /* end: String */
