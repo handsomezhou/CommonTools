@@ -1,17 +1,20 @@
 package com.android.commontools.util;
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +27,7 @@ import java.util.Map;
  */
 
 public class JsonUtil {
+    private static final String TAG="JsonUtil";
     public static String JSON_ARRAY_PREFIX="[";
     public static String JSON_ARRAY_SUFFIX="]";
     private static Gson sGson = null;
