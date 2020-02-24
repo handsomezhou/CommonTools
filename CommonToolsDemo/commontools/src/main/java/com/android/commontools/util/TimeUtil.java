@@ -564,11 +564,34 @@ public class TimeUtil {
         return (TimeUtil.ms2day(srcMs)==TimeUtil.ms2day(dstMs));
     }
 
+    /**
+     * get start time ms(timeMs the same day)
+     * @return
+     */
+    public static long getStartTimeOfDay(long timeMs){
+        return timeMs- TimeUtil.getMilliSecondOfDay(timeMs);
+    }
 
+    /**
+     * get end time ms(timeMs the same day)
+     * @return
+     */
+    public static long getEndTimeMsOfDay(long timeMs){
+        return TimeUtil.getStartTimeOfDay(timeMs)+TimeUtil.hour2ms(24);
+    }
+
+    /**
+     * get start time ms(today)
+     * @return
+     */
     public static long getStartTimeOfToday(){
         return System.currentTimeMillis()- TimeUtil.getMilliSecondOfDay();
     }
 
+    /**
+     * get end time ms(today)
+     * @return
+     */
     public static long getEndTimeMsOfToday(){
         return TimeUtil.getStartTimeOfToday()+TimeUtil.hour2ms(24);
     }

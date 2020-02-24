@@ -9,5 +9,7 @@ public interface TimePatternConstant {
     String TIME_PATTERN_YEAR_TO_MIN="yyyy-MM-dd HH:mm";
     String TIME_PATTERN="MM-dd HH:mm";
     String DATE_PATTERN="MM-dd";
+    String TIME_PATTERN_MONTH_TO_SEC="MM-dd HH:mm:ss";
     String DATE_PATTERN_YEAR_TO_DAY="yyyy-MM-dd";
+
 }
