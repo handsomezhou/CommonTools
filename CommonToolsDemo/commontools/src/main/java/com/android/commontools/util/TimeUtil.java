@@ -551,7 +551,7 @@ public class TimeUtil {
      * @return
      */
     public static String getLogTime(){
-        return  Constant.NULL_STRING+Constant.LEFT_SQUARE_BRACKETS+TimeUtil.getFormatTime(System.currentTimeMillis(), TimePatternConstant.LOG_TIME_PATTERN)+ Constant.RIGHT_SQUARE_BRACKETS;
+        return  Constant.NULL_STRING+Constant.LEFT_SQUARE_BRACKETS+TimeUtil.getFormatTime(System.currentTimeMillis(), TimePatternConstant.YEAR_TO_SEC)+ Constant.RIGHT_SQUARE_BRACKETS;
     }
 
     /**
