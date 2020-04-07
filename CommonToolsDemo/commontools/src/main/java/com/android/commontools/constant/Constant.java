@@ -163,4 +163,35 @@ public interface Constant {
     /* start: long */
     long ZERO_OF_LONG = 0;
     /* end: long */
+
+    /**
+     * start: others
+     */
+    /**
+     * Byte掩码
+     */
+    int BYTE_MASK = 0xFF;
+
+    /**
+     * 每字节bit数
+     */
+    int BIT_COUNT_PER_BYTE = 8;
+
+    /**
+     * Bit掩码
+     */
+    int BIT_MASK = 0x01;
+
+    /**
+     * short类型掩码
+     */
+    int SHORT_MASK = 0xFFFF;
+
+    /**
+     * int 类型掩码
+     */
+    int INT_MASK=0xFFFFFFFF;
+    /**
+     * end: others
+     */
 }
