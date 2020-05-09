@@ -73,6 +73,16 @@ public class CommonUtil {
 		}
 		return isZero;
 	}
+
+    /**
+     * judge  whether the value is equal
+     * @param src
+     * @param dst
+     * @return
+     */
+    public static boolean isEqual(double src, double dst) {
+        return CommonUtil.isZero(src - dst);
+    }
 	
 	/**
 	 * judge whether the value is null or empty
