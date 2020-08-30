@@ -117,7 +117,30 @@ public class CommonUtil {
 	        
 	        return empty;
 	}
-	
+
+	/**
+	 * https://www.cnblogs.com/heyuxiu/p/5972187.html
+	 * @param str
+	 * @return
+	 */
+	public static boolean isDigit(String str){
+		boolean digit=false;
+		do{
+			if(true==CommonUtil.isEmpty(str)){
+				break;
+			}
+
+			int strLen=str.length();
+			digit=true;
+			for (int i=0;i<strLen;i++) {
+				if(false==Character.isDigit(str.charAt(i))){
+					digit=false;
+					break;
+				}
+			}
+		}while (false);
+		return digit;
+	}
     /**
      * whether the value in the all-close range [minValue, MaxValue].
      * 

@@ -123,6 +123,7 @@ public interface Constant {
     String UNKNOW = "--";
     String NULL_STRING = "";
     String NULL = "null";
+    String FORMAT_ZERO_DECIMAL_PLACES = "%.0f";
     String FORMAT_ONE_DECIMAL_PLACES = "%.1f";
     String FORMAT_TWO_DECIMAL_PLACES = "%.2f";
     String FORMAT_THREE_DECIMAL_PLACES = "%.3f";

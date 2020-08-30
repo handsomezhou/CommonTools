@@ -440,7 +440,28 @@ public class TimeUtil {
         
         return minuteOfDay;
     }
-    
+
+    /**
+     * new add
+     *
+     * Indicating the millisecond of the day.
+     * E.g., at 10:04:15.250 PM the {@code TimeUtil#getMinuteOfDay()} is (22*60+04).
+     * @param timeMs
+     * @return
+     */
+    public static int getMinuteOfDay(long timeMs){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(timeMs);
+        int hour_of_day=calendar.get(Calendar.HOUR_OF_DAY);
+        int minute=calendar.get(Calendar.MINUTE);
+
+
+        int minuteOfDay=TimeUtil.hour2min(hour_of_day)+minute;
+
+
+        return minuteOfDay;
+    }
+
     /**
      * {@link Calendar#SECOND}
      * @return
