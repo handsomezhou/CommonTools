@@ -297,6 +297,25 @@ public class AppUtil {
 		return appName;
 	}
 
+	/**
+	 * @return null may be returned if the specified process not found
+	 *
+	 * Reference: https://agehua.github.io/2017/02/21/Multi-Process-Dispatch/
+	 */
+	public static String getProcessName(Context cxt, int pid) {
+		ActivityManager am = (ActivityManager) cxt.getSystemService(Context.ACTIVITY_SERVICE);
+		List<ActivityManager.RunningAppProcessInfo> runningApps = am.getRunningAppProcesses();
+		if (runningApps == null) {
+			return null;
+		}
+		for (ActivityManager.RunningAppProcessInfo procInfo : runningApps) {
+			if (procInfo.pid == pid) {
+				return procInfo.processName;
+			}
+		}
+		return null;
+	}
+
 	public static Intent createLaunchIntent(ComponentName componentName) {
 		Intent intent = new Intent(Intent.ACTION_MAIN);
 		intent.addCategory(Intent.CATEGORY_LAUNCHER);
