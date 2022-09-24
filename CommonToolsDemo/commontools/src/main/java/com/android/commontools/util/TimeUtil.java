@@ -566,6 +566,23 @@ public class TimeUtil {
         return  simpleDateFormat.format(ms);
     }
 
+    /**
+     *
+     * @param date
+     * @param pattern
+     * @return
+     */
+    public static long str2ms(String date, String pattern){
+        long time=0;
+        try {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+            time = simpleDateFormat.parse(date).getTime();
+        }catch (Exception ex){
+            System.out.println("str2ms():"+ex.toString());
+        }
+
+        return time;
+    }
 
     /**
      * get log time
